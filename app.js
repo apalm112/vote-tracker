@@ -3,7 +3,9 @@ var catPhotos = [];  //create array for cat photos
 var photo1 = document.createElement('img');
 var photo2 = document.createElement('img');
 
-var temp =document.getElementById('temp');
+var temp1 =document.getElementById('temp1');
+var temp2 =document.getElementById('temp2');
+
 
 // PHOTO CONTSRUCTOR
 function CatPhoto (name, path) {
@@ -14,9 +16,10 @@ function CatPhoto (name, path) {
   catPhotos.push(this);
 }
 
-// Random Number Generator
+// Random Number Generator Trying to fix!!!  Fucking Fixed IT YAY!
 function getRandom () {
-  return Math.floor((Math.random() * 12) + 1);
+  return Math.floor(Math.random() * (catPhotos.length));
+  console.log('getRandom');
 }
 
 var wineCat = new CatPhoto ('winecat', 'img/winecat.png');
@@ -32,55 +35,46 @@ var kfc = new CatPhoto ('kfc', 'img/kfc-cat.png');
 var nyan = new CatPhoto ('nyan', 'img/nyan.png');
 var starbucks = new CatPhoto ('starbucks', 'img/starbucks.gif');
 
+var tracker = {
+  img1: 0,
+  img2: 0
+}
 
-// check the photos are not duplicates
-//newRandom = function(cat1) {
-  //do {
-    //var cat2 = getRandom();
-//} while (cat1 === cat2)
-//  return cat2;
-//}
-
-//votes of object get incremented
-//vote = function (cat) {
-//  photo1.parentNode.removeChild(photo1);
- // photo2.parentNode.removeChild(photo2);
-
-//  displayCatPhotos();
-//}
-
-// create img elements, event listeners
+// Display photos & check for duplicates
 displayCatPhotos = function() {
-  // var cat1 = getRandom();
-//  console.log(cat1);
-  // var cat2 = newRandom(cat1);
-  //console.log(cat2);
+    tracker.img1 = getRandom();
+    tracker.img2 = getRandom();
+    photo1.src = catPhotos[tracker.img1].path;
 
+   if (tracker.img1 === tracker.img2) {
+    tracker.img2 = getRandom();
+    console.log('duplicate found');
+   }
+    photo2.src = catPhotos[tracker.img2].path;
 
-  photo1.src = catPhotos[getRandom()].path;
   console.log(photo1);
   photo1.setAttribute('width', '300');
 
-  photo2.src = catPhotos[getRandom()].path;
   photo2.setAttribute('width', '300');
 
-  temp.appendChild(photo1);
-  temp.appendChild(photo2);
+  temp1.appendChild(photo1);
+  temp2.appendChild(photo2);
 }
-
-//photo1.addEventListener('click', function() {
- // vote(cat1)
-//});
-
-//photo2.addEventListener('click', function() {
-// vote(cat2)
-//});
 
 displayCatPhotos();
 
+temp1.addEventListener('click', function(){
+  console.log('temp1 was clicked');
+  displayCatPhotos();
+});
+
+temp2.addEventListener('click', function(){
+  console.log('temp2 was clicked');
+  displayCatPhotos();
+});
 
 
-
+// Chart JS
 var taValues = [34 ,67, 44, 93];
 
 var kevin = [
@@ -123,14 +117,3 @@ var skillsChart = new Chart(context).Doughnut(kevin, {
     animateScale : true,
     scaleShowLabelBackdrop : true
 });
-
-
-
-
-
-  //call getRandom for two random numbers
-  //Use those random nums to access the array and get a photo
-  //User the .src attrib to assign a path to each of the images
-
-
-
