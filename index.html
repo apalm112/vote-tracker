@@ -1,16 +1,14 @@
-
 <!DOCTYPE html>
 <html>
   <head>
     <title>Vote Tracker</title>
-    <link src="vote.css" rel="stylesheet" type="text/css" href="">
-    <!-- <script src="chart.js"</script> -->
+    <link rel="stylesheet" type="text/css" href="vote.css">
+    <script src="chart.js"></script>
   </head>
   <body style="background-color: #D6C8AB;">
     <header>
       <h1>
         <div>Super Bad Space Cat Vote Tracker</div>
-        <canvas id="space-cat" width="600" height="600"></canvas>
         <div>
          <!-- <img src="img/internet-cat.gif">  -->
         </div>
@@ -22,10 +20,6 @@
 
       <p id="photo1">photo1 Name</p>
       <p id="photo2">photo2 Name</p>
-
-      <div>
-        <img id="img2" alt="photo two" src="img/cupcake.gif" height="220" width="320">
-      </div>
     </main>
 
     <button id="left-cat">
@@ -35,16 +29,11 @@
       <p>Vote Right Cat</p>
     </button>
 
-    <div>
-      <p>Chart goes here</p>
-    </div>
+      <div id="temp"></div>
 
+    <canvas id="ta-popularity" width="300" height="300"></canvas>
 
-    <script src="vote.js" type="text/javascript"></script>
-    <footer>
-      <p>Copyright notice</p>
-    </footer>
+    <script src="app.js"></script>
   </body>
 </html>
-
 
