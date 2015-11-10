@@ -1,4 +1,8 @@
 
+header, section, article, footer, figure {
+  display: block;
+}
+
 body {
   background-color: #D6C8AB;
 }
