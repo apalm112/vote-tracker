@@ -6,9 +6,13 @@ var photo2 = document.createElement('img');
 var temp1 =document.getElementById('temp1');
 var temp2 =document.getElementById('temp2');
 
+var tracker = {
+  img1: 0,
+  img2: 0
+}
 
 // PHOTO CONTSRUCTOR
-function CatPhoto (name, path) {
+function CatPhoto (name, path, votes, highlight) {
   this.name = name;
   this.path = path;
   this.votes = 0;
@@ -16,10 +20,9 @@ function CatPhoto (name, path) {
   catPhotos.push(this);
 }
 
-// Random Number Generator Trying to fix!!!  Fucking Fixed IT YAY!
+// Random Number Generator
 function getRandom () {
   return Math.floor(Math.random() * (catPhotos.length));
-  console.log('getRandom');
 }
 
 var wineCat = new CatPhoto ('winecat', 'img/winecat.png');
@@ -35,22 +38,20 @@ var kfc = new CatPhoto ('kfc', 'img/kfc-cat.png');
 var nyan = new CatPhoto ('nyan', 'img/nyan.png');
 var starbucks = new CatPhoto ('starbucks', 'img/starbucks.gif');
 
-var tracker = {
-  img1: 0,
-  img2: 0
-}
 
 // Display photos & check for duplicates
 displayCatPhotos = function() {
-    tracker.img1 = getRandom();
-    tracker.img2 = getRandom();
-    photo1.src = catPhotos[tracker.img1].path;
+  tracker.img1 = getRandom();
+  console.log(tracker.img1);
+  tracker.img2 = getRandom();
+  console.log(catPhotos);
+  photo1.src = catPhotos[tracker.img1].path;
 
-   if (tracker.img1 === tracker.img2) {
+ if (tracker.img1 === tracker.img2) {
     tracker.img2 = getRandom();
     console.log('duplicate found');
-   }
-    photo2.src = catPhotos[tracker.img2].path;
+  }
+  photo2.src = catPhotos[tracker.img2].path;
 
   console.log(photo1);
   photo1.setAttribute('width', '300');
@@ -64,14 +65,36 @@ displayCatPhotos = function() {
 displayCatPhotos();
 
 temp1.addEventListener('click', function(){
-  console.log('temp1 was clicked');
+ // console.log('temp1 was clicked');
   displayCatPhotos();
 });
 
 temp2.addEventListener('click', function(){
-  console.log('temp2 was clicked');
+//  console.log('temp2 was clicked');
   displayCatPhotos();
 });
+
+// Attempt To Create Vote Counter Here
+var selectionOne = function() {
+  var selection = catPhotos[tracker.img1];
+  selection.votes++;
+  console.log(selection.name + 'has' + selection.votes + 'votes');
+  displayCatPhotos();
+}
+/*var selectionTwo = function() {
+  var selection = photo2[tracker.img2];
+  selection.votes++;
+  console.log(section.name + 'has' + selection.votes + 'votes');
+  display();
+}*/
+  temp1.addEventListener('click', selectionOne);
+//choice2.addEventListener('click', selectionTwo);
+
+
+
+
+
+
 
 
 // Chart JS
