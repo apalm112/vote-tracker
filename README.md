@@ -25,12 +25,6 @@ https://secure.static.tumblr.com/2339edf2321c857c8693c13a0c1a9065/nskfpus/Poxni8
 nyan.png
 http://media.tumblr.com/tumblr_m34ekyEVnf1r9nsjm.jpg
 
-friskies cat.gif
-http://laughingsquid.com/wp-content/uploads/tumblr_lv1u3vbF1T1r4xjo2o1_500.gif
-
-internet wizard cat.gif
-http://i.imgur.com/PJ3ciRp.gif
-
 starwarscat.png
 https://d9hblenkye35w.cloudfront.net/media/thumbnail/int/xl/0/66593296125853696/349408895338807296
 
@@ -49,5 +43,31 @@ http://38.media.tumblr.com/4e36d33bbe9587174724c93b0c83ab5e/tumblr_nafvbgHzC81ti
 cupcake.gif
 https://s-media-cache-ak0.pinimg.com/originals/f8/8b/9f/f88b9f3a9f1b3642346a2ae71e3bd2ac.gif
 
+friskies cat.gif
+http://laughingsquid.com/wp-content/uploads/tumblr_lv1u3vbF1T1r4xjo2o1_500.gif
+
+internet wizard cat.gif
+http://i.imgur.com/PJ3ciRp.gif
+
+Pizza Slice Cat:
+http://33.media.tumblr.com/2c07c6dd0db42f989bf47b741cb4516f/tumblr_msxw68bnA21r4xjo2o1_250.gif
+
+marsrovercat.gif
+https://lh5.googleusercontent.com/-oNuqUuKqEAE/UCY2j98zVkI/AAAAAAAAC2E/yIKjslO6s6c/w800-h800/Curiosity%2BThrilled%2BThe%2BCat.gif
+
+wavingcat.gif
+https://38.media.tumblr.com/e10c07924d7415a5519e36978dbcfb37/tumblr_mz0i38G7oW1sgxfddo1_500.gif
+
+canhazcheezburger.gif
+http://media.giphy.com/media/hQ5r6RMsJlqXC/giphy.gif
+
+nebulacat.gif
+http://38.media.tumblr.com/ef7c55a792603aedab7545a3347121ae/tumblr_n4sxp1v62J1r4xjo2o1_250.gif
+
+jetpackcat.gif
+http://awesomegifs.com/wp-content/uploads/space-kitty-is-going-to-space.gif
+
+shootlasercat.gif
+https://s-media-cache-ak0.pinimg.com/originals/be/5d/93/be5d93676a6d229d79dd972e2a3ba67e.gif
 
 
