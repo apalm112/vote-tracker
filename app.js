@@ -3,8 +3,8 @@ var catPhotos = [];  //create array for cat photos
 var photo1 = document.createElement('img');
 var photo2 = document.createElement('img');
 
-var temp1 =document.getElementById('temp1');
-var temp2 =document.getElementById('temp2');
+var temp1 = document.getElementById('temp1');
+var temp2 = document.getElementById('temp2');
 
 var tracker = {
   img1: 0,
@@ -74,6 +74,7 @@ temp2.addEventListener('click', function(){
   displayCatPhotos();
 });
 
+
 // Attempt To Create Vote Counter Here
 var selectionOne = function() {
   var selection = catPhotos[tracker.img1];
@@ -81,26 +82,30 @@ var selectionOne = function() {
   console.log(selection.name + 'has' + selection.votes + 'votes');
   displayCatPhotos();
 }
-/*var selectionTwo = function() {
-  var selection = photo2[tracker.img2];
+var selectionTwo = function() {
+  var selection = catPhotos[tracker.img2];
   selection.votes++;
-  console.log(section.name + 'has' + selection.votes + 'votes');
-  display();
-}*/
-  temp1.addEventListener('click', selectionOne);
-//choice2.addEventListener('click', selectionTwo);
+  console.log(selection.name + 'has' + selection.votes + 'votes');
+  displayCatPhotos();
+}
+temp1.addEventListener('click', selectionOne);
+temp2.addEventListener('click', selectionTwo);
+
+// tracker.method = function() {
+//   does this thing
+//   does this other little thing
+// };
+// tracker.method 2 = function() {
+//   does something else
+// };
 
 
+// tracker.displayCatPhotos();
 
+//CHART JS
+    var taValues = [1, 1, 2, 2];
 
-
-
-
-
-// Chart JS
-var taValues = [34 ,67, 44, 93];
-
-var kevin = [
+var catScore = [
   {
     value: taValues[0],
     label: 'Darcy',
@@ -127,9 +132,9 @@ var kevin = [
   }
 ];
 
-var context = document.getElementById('ta-popularity').getContext('2d');
+var context = document.getElementById('space-cats').getContext('2d');
 
-var skillsChart = new Chart(context).Doughnut(kevin, {
+var skillsChart = new Chart(context).Doughnut(catScore, {
     //Number - Amount of animation steps
     animationSteps : 100,
     //String - Animation easing effect
