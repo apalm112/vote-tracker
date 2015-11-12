@@ -2,6 +2,9 @@
 A page that asks the user to vote for one of two photos.
 
 
+Flex Box:
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
 
 Font:
 <link href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,greek' rel='stylesheet' type='text/css'>

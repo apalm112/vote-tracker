@@ -6,24 +6,30 @@
     <link rel="stylesheet" type="text/css" href="vote.css">
   </head>
   <body style="background-color: #D6C8AB;">
-    <header>
-      <h1>
-        <div>Super Bad Space Cat Vote Tracker</div>
+    <div class="wrapper">
+    <header class="header"><h1>Super Bad Space Cat Vote Tracker</h1></header>
+    <article class="main">
+      <p>Which Space Cat Is The Baddest?</p>
+    </article>
+    <aside class="aside aside-1">
+      <div id="temp1"><p id="photo1name">photo1 Space Cat!</p></div>
+    </aside>
+    <aside class="aside aside-2">
+      <div id="temp2"><p id="photo2name">photo2 Aslo Space Cat!</p></div>
+    </aside>
+    </div>
+
+
         <div>
          <!-- <img src="img/internet-cat.gif">  -->
         </div>
-      </h1>
-    </header>
-    <main>
-      <p>Which Space Cat Is The Baddest?</p>
-    </main>
-    </button>
-    <div id="temp1"><p id="photo1name">photo1 Name</p></div>
+
     <div id="temp2"><p id="photo2name">photo2 Name</p></div>
 
     <div id="chart">
       <canvas id="vote-chart" width="700" height="300"></canvas>
     </div>
+      <footer class="footer">Footer</footer>
 
     <script src="chart.js"></script>
     <script src="app.js"></script>
