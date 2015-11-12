@@ -1,23 +1,7 @@
-/*
-header, section, article, footer, figure {
-  display: block;
-}
-
-body {
-  background-color: #D6C8AB;
-}
-
-main p {
-  font-size: 29px;
-  font-weight: 12px;
-} */
-
-
-
-/* CSS TRICKS COM HERE */
+/* CSS TRICKS Flex Box */
 
 @import "compass/css3";
-
+@import url(https://fonts.googleapis.com/css?family=Orbitron:400,500);
 .wrapper {
   display: -webkit-box;
   display: -moz-box;
@@ -32,30 +16,39 @@ main p {
   text-align: center;
 }
 
+body header h1 {
+  font-size: 55px;
+  font-family: 'Orbitron', sans-serif;
+}
+body article p {
+    font-family: 'Orbitron', sans-serif;
+}
+
+
 .wrapper > * {
   padding: 10px;
   flex: 1 100%;
 }
 
 .header {
-  background: tomato;
+  background: #8D9EA8;
 }
 
 .footer {
-  background: lightgreen;
+  background: #847f5b;
 }
 
 .main {
   text-align: left;
-  background: deepskyblue;
+  background: #D6C8AB;
 }
 
 .aside-1 {
-  background: gold;
+  background: #333F41;
 }
 
 .aside-2 {
-  background: hotpink;
+  background: #333F41;
 }
 
 @media all and (min-width: 600px) {
@@ -72,4 +65,26 @@ main p {
 
 body {
   padding: 2em;
+  background-color: #F3ECE1;
+}
+
+#temp1:hover {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  background: #F3ECE1;
+}
+
+
+#temp2:hover {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  background: #F3ECE1;
+}
+body aside div p {
+  font-size: 30px;
+  font-family: 'Orbitron', sans-serif;
+}
+#photo2name {
+  font-size: 30px;
+  font-family: 'Orbitron', sans-serif;
 }

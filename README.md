@@ -1,17 +1,14 @@
 # vote-tracker
 A page that asks the user to vote for one of two photos.
 
-
 Flex Box:
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
-
-Font:
-<link href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,greek' rel='stylesheet' type='text/css'>
+Font: Google 'Orbitron'  Very Spacey, yes?
+@import url(https://fonts.googleapis.com/css?family=Orbitron:400,500);
 
 Color Palette:
 https://color.adobe.com/16358305965dfdea74d4ez-color-theme-7162389/
-
 
 Space Cats Photos:
 ------------------
@@ -73,4 +70,4 @@ http://awesomegifs.com/wp-content/uploads/space-kitty-is-going-to-space.gif
 shootlasercat.gif
 https://s-media-cache-ak0.pinimg.com/originals/be/5d/93/be5d93676a6d229d79dd972e2a3ba67e.gif
 
-
+Had a lot of help on the code from, in no particular order, Darcy, Jonathan, Miranda, Ivar, Scott, Sam & probably someone else I've forgotten.

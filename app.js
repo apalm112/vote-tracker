@@ -1,4 +1,4 @@
-var catChoice = [];  //create array for cat photos
+var catChoice = [];  //create array for cat photos, OMG Cat Photos!
 
 // PHOTO CONTSRUCTOR
 function CatPhoto (name, path, votes, highlight) {
@@ -34,12 +34,10 @@ var tracker = {
   img1: 0,
   img2: 0
 }
-
-var temp1 = document.getElementById('temp1');
-var temp2 = document.getElementById('temp2');
-
 var photo1 = document.createElement('img');
 var photo2 = document.createElement('img');
+var temp1 = document.getElementById('temp1');
+var temp2 = document.getElementById('temp2');
 
 
 // Display photos & check for duplicates
@@ -58,11 +56,7 @@ displayCatPhotos = function() {
   temp2.appendChild(photo2);
 }
 
-
-//votesChart.update(); // not sure bout this one
-
 displayCatPhotos();
-
 
 // Attempt To Create Vote Counter Here
 var selectionOne = function() {
@@ -72,6 +66,8 @@ var selectionOne = function() {
   votesChart.datasets[0].bars[tracker.img1].value += 1;
   votesChart.update();
   console.log(selection.name + 'has' + selection.votes + 'votes');
+    //eventListener here to highlight user photo choice?
+
 displayCatPhotos();
 }
 var selectionTwo = function() {
@@ -81,21 +77,16 @@ var selectionTwo = function() {
   votesChart.update();
   votesChart.datasets[0].bars[tracker.img2].value += 1;
   console.log(selection.name + 'has' + selection.votes + 'votes');
+      //eventListener here to highlight user photo choice?
 displayCatPhotos();
 }
 
-temp1.addEventListener('click', selectionOne);
-temp2.addEventListener('click', selectionTwo);
+  temp1.addEventListener('click', selectionOne);
 
-/*temp1.addEventListener('click', function(){
- // console.log('temp1 was clicked');
- (catChoice);
-});
+  temp2.addEventListener('click', selectionTwo);
 
-temp2.addEventListener('click', function(){
-//  console.log('temp2 was clicked');
-displayCatPhotos();
-});*/
+//temp1.addEventListener('click', function(){
+
 
 // Chart Goes Here
 var data = {
@@ -103,7 +94,7 @@ var data = {
   datasets: [
     {
       label: "Votes Cast",
-      fillColor: "3498db",
+      fillColor: "#8D9EA8",
       strokeColor: "#34495e",
       highlightFill: "rgba(220,220,220,0.75)",
       highlightStroke: "#7f8c8d",
@@ -115,33 +106,17 @@ var data = {
 var context = document.getElementById('vote-chart').getContext('2d');
 
 var chartOptions = {
-
   scaleBeginAtZero : true,
-
   scaleShowGridLines : true,
-
   scaleGridLineColor: "white",
-
   scaleGridLineWidth : 1,
-
   scaleShowHorizontalLines : true,
-
   scaleShowVerticalLines : true,
-
   barShowStroke : true,
-
   barStrokeWidth : 2,
-
   barValueSpacing : 5,
-
   barDatasetSpacing : 1,
-
   lengendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].fillColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
 };
-
 var votesChart = new Chart(context).Bar(data, chartOptions);
-
 displayCatPhotos();
-
-//votesChart.update();  // <---doesn't work either
-

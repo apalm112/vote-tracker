@@ -97,19 +97,19 @@
       scaleBeginAtZero: false,
 
       // String - Scale label font declaration for the scale label
-      scaleFontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+      scaleFontFamily: " 'Orbitron', Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
 
       // Number - Scale label font size in pixels
-      scaleFontSize: 12,
+      scaleFontSize: 16,
 
       // String - Scale label font weight style
-      scaleFontStyle: "normal",
+      scaleFontStyle: "bold",
 
       // String - Scale label font colour
       scaleFontColor: "#666",
 
       // Boolean - whether or not the chart should be responsive and resize when the browser does.
-      responsive: false,
+      responsive: true,
 
       // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
       maintainAspectRatio: true,
