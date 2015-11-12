@@ -64,11 +64,20 @@ var selectionOne = function() {
   selection.votes++;
   data.datasets[0].data[tracker.img1] += 1;
   votesChart.datasets[0].bars[tracker.img1].value += 1;
-  votesChart.update();
   console.log(selection.name + 'has' + selection.votes + 'votes');
-    //eventListener here to highlight user photo choice?
 
-displayCatPhotos();
+  //this adds the vote again box after voting
+  var voteAgain = document.createElement('button');
+  voteAgain.setAttribute('id', 'vote');
+  voteAgain.innerHTML = ("Click Here To Vote Again!");
+  document.body.appendChild(voteAgain);
+  function ShowButton() {
+    document.getElementById("vote").style.display = "";
+    vote.addEventListener('click', selectionOne, false);
+    }
+
+  votesChart.update();
+  displayCatPhotos();
 }
 var selectionTwo = function() {
   var selection = catChoice[tracker.img2];
@@ -77,15 +86,23 @@ var selectionTwo = function() {
   votesChart.update();
   votesChart.datasets[0].bars[tracker.img2].value += 1;
   console.log(selection.name + 'has' + selection.votes + 'votes');
-      //eventListener here to highlight user photo choice?
-displayCatPhotos();
+
+  //this adds the vote again box after voting
+  var voteAgain = document.createElement('button');
+  voteAgain.setAttribute('id', 'vote');
+  voteAgain.innerHTML = ("Click Here To Vote Again!");
+  document.body.appendChild(voteAgain);
+  function ShowButton() {
+    document.getElementById("vote").style.display = "";
+}
+
+  //eventListener here to highlight user photo choice?
+  displayCatPhotos();
 }
 
   temp1.addEventListener('click', selectionOne);
-
   temp2.addEventListener('click', selectionTwo);
 
-//temp1.addEventListener('click', function(){
 
 
 // Chart Goes Here
@@ -120,3 +137,45 @@ var chartOptions = {
 };
 var votesChart = new Chart(context).Bar(data, chartOptions);
 displayCatPhotos();
+
+
+/*  MUTHUH TRUCKIN' LO-CAL SHTOAR-UHG THINGY JASON FRIDAY 13TH
+
+if (typeof(Storage) !== "undefined") {
+    // Store
+    localStorage.setItem("lastname", "Smith");
+    // Retrieve
+    document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+} else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+
+JSON.stringify();
+JSON.parse();
+localStorage.setItem()
+localStorage.getItem()
+
+The vote tracker can work by utilizing two states
+  1. When the user see pictures to vote on, and the event listeners are listening for a vote
+  2. After the user has voted, results are being displayed, and the tracker is awaiting user input to then display 2 new photos
+
+  stateVoting() {
+    two new random numbers ()
+    display the photos ()
+    hide the chart? ()
+    turn off or hide the '2 more photos' button ()
+  }
+
+  stateResults() {
+    tally votes ()
+    render the chart ()
+    (local storage) ()
+    turn off the event listeners on the pictures to prevent further voting ()
+    turn on or show the '2 more photos button' ()
+  }
+
+  buttonTwoNewPhotos.addEventListener('click', stateVoting);
+
+  picLeft.addEventListener('click', stateResults);
+  picRight.addEventListener('click', stateResults);
+*/

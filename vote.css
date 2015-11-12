@@ -23,7 +23,21 @@ body header h1 {
 body article p {
     font-family: 'Orbitron', sans-serif;
 }
-
+#vote {
+  margin: 0px 0px 0px 40px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 34px;
+  font-style: bold;
+  width: 220px;
+  height: 220px;
+  background: #333F41;
+}
+#vote:hover {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  background: #F3ECE1;
+  font-size: 20px;
+}
 
 .wrapper > * {
   padding: 10px;
@@ -59,8 +73,9 @@ body article p {
   .main    { flex: 3 0px; }
   .aside-1 { order: 1; }
   .main    { order: 2; }
-  .aside-2 { order: 3; }
-  .footer  { order: 4; }
+  .center  { order: 3; }
+  .aside-2 { order: 4; }
+  .footer  { order: 5; }
 }
 
 body {
