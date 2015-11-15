@@ -31,6 +31,7 @@ body article p {
   width: 220px;
   height: 220px;
   background: #333F41;
+  display: flex;
 }
 #vote:hover {
   opacity: 0.4;
