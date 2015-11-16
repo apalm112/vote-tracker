@@ -24,7 +24,7 @@ body article p {
     font-family: 'Orbitron', sans-serif;
 }
 #vote {
-  margin: 0px 0px 0px 40px;
+  margin: -740px 0px 0px 490px;
   font-family: 'Orbitron', sans-serif;
   font-size: 34px;
   font-style: bold;
@@ -32,6 +32,7 @@ body article p {
   height: 220px;
   background: #333F41;
   display: flex;
+
 }
 #vote:hover {
   opacity: 0.4;

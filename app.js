@@ -39,7 +39,7 @@ displayCatPhotos = function() {
 
 //  displayCatPhotos();
 
-// Attempt To Create Vote Counter Here
+//  Vote Counter Here
 var selectionOne = function() {
   var selection = catChoice[tracker.img1];
   selection.votes++;
@@ -116,16 +116,16 @@ function checkLocal() {
         data = {
           labels: ['winecat', 'starwars', 'r2d2', 'spacemushroom', 'marsrovercat', 'jetpackcat', 'friskie', 'cupcake', 'bunny', 'cheezburger', 'nyan', 'starbucks', 'nebula', 'pizzacat', 'shootlasercat', 'wavingcat'],
         datasets: [
-      {
+          {
         label: "Votes Cast",
         fillColor: "#8D9EA8",
         strokeColor: "#34495e",
         highlightFill: "rgba(220,220,220,0.75)",
         highlightStroke: "#7f8c8d",
         data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-    }
-  ]
-}
+          }
+        ]
+        }
     var wineCat = new CatPhoto ('winecat', 'img/winecat.gif');
     var starWars = new CatPhoto ('starwars', 'img/starwarscat.png');
     var r2d2 = new CatPhoto ('r2d2', 'img/r2d2.gif');
