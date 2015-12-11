@@ -147,3 +147,31 @@ function checkLocal() {
 checkLocal();
 var votesChart = new Chart(context).Bar(data, chartOptions);
 displayCatPhotos();
+
+// Overlay with large images in Lightbox after voted on goes here
+var $overlay = $('<div id="overlay"></div>');
+var $caption = $("<p></p>");
+//An image to overlay
+$overlay.append($image);
+// A caption to overlay
+$overlay.append($caption);
+//Add overlay
+$("body").append($overlay);
+
+$("#imageGallery a").click(function(event){
+  event.preventDefault();
+  var imageLocation = $(this).attr("href");
+  $image.attr("src", imageLocation);
+  $overlay.show();
+
+  var captionText = $(this).children(
+    "img").attr("alt");
+  $caption.text(captionText);
+
+});
+
+//When overlay is clicked
+$overlay.click(function(){
+  //hide the overlay
+  $overlay.hide();
+})
